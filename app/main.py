@@ -3,9 +3,9 @@ from fastapi import FastAPI
 
 from blog import models
 from db.db import engine
+from routers.auth import router as auth_router
 from routers.blogs import router
 from routers.user import router as user_router
-from routers.auth import router as auth_router
 
 app = FastAPI()
 app.include_router(auth_router)
